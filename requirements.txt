@@ -6,7 +6,6 @@ itsdangerous
 Jinja2
 joblib
 MarkupSafe
-nltk==3.3
 numpy
 regex
 scikit-learn
