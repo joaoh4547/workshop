@@ -2,7 +2,7 @@ from sklearn.neural_network import MLPClassifier
 
 
 class NeuralNetwork:
-    def __init__(self, n_layers=200):
+    def __init__(self, n_layers=10):
         self.classifier = MLPClassifier(hidden_layer_sizes=n_layers)
 
     def train(self, X, labels):
