@@ -1,5 +1,5 @@
 click
-Flask
+Flask~=1.1.2
 Flask-Cors
 gunicorn
 itsdangerous
@@ -8,9 +8,10 @@ joblib
 MarkupSafe
 numpy
 regex
-scikit-learn
+scikit-learn~=0.24.1
 scipy
 six
 threadpoolctl
 tqdm
 Werkzeug
+nltk~=3.5
