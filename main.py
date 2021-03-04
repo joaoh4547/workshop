@@ -1,3 +1,4 @@
+import nltk
 from flask import Flask
 from flask_cors import CORS
 from flask import request, jsonify
@@ -6,9 +7,11 @@ from sklearn.model_selection import train_test_split
 from ml.classifier import NeuralNetwork
 from ml import pre_process_data, Tokenize
 from utils import read_files_of_directory
+from time import sleep
 
 
 file_data = read_files_of_directory('data')
+
 data = []
 labels = []
 for x in file_data:
@@ -32,12 +35,12 @@ CORS(app)
 def classifyText():
     body_data: dict = loads(request.data)
     if not body_data.get("text"):
-        return jsonify({"message": "o texto é obrigatorio"}), 500
+        return jsonify({"message": "o texto é obrigatorio"}), 400
     text_features = tokenizer.transform([body_data['text']])
     pred = nn.test(text_features)
-
+    sleep(5)
     return jsonify({"prediction": pred[0]}), 200
 
 
 if __name__ == '__main__':
-    app.run(debug=False,port=3000)
+    app.run(debug=False, port=3000)

@@ -14,4 +14,4 @@ six
 threadpoolctl
 tqdm
 Werkzeug
-nltk~=3.5
+nltk

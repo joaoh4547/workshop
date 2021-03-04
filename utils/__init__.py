@@ -3,7 +3,8 @@ from pathlib import Path
 
 
 def read_files_of_directory(directory: str):
-    directory = str(Path(__path__[0]).resolve().parent)+'\\' + directory
+    directory = str(Path(__path__[0]).resolve().parent)+os.path.sep + directory
+    print(directory)
     if os.path.exists(directory) and os.path.isdir(directory):
         files_data = []
         content_in_folder = os.listdir(directory)
