@@ -16,7 +16,6 @@ from ml.classifier import NeuralNetwork
 
 if __name__ == '__main__':
     pass
-    # Classify("jair bolsonaro")
     # data = []
     # labels = []
     # for x in file_data:
